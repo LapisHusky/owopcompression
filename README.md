@@ -32,10 +32,14 @@ Size is measured in mean bytes per chunk.
 
 ## PNG compression (effort 5):
 Compression time per chunk: 8.560 ms
+
 Decompression time per chunk: 5.197 ms
+
 Output size per chunk: 2258 bytes
 
 ## Modified QOI compression
 Compression time per chunk: 0.574 ms
+
 Decompression time per chunk: 0.309 ms
+
 Output size per chunk: 2016 bytes
