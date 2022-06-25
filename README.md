@@ -1,7 +1,7 @@
 # owopcompression
 An experiment with using custom formats to store the world in ourworldofpixels.com
 
-This compresses 256x256 "chunks" using a custom image format based on (QOI)[https://qoiformat.org/]. The code is a modified version of (qoijs)[https://github.com/kchapelier/qoijs], an implementation of QOI in Javascript.
+This compresses 256x256 "chunks" using a custom image format based on [QOI](https://qoiformat.org/). The code is a modified version of [qoijs](https://github.com/kchapelier/qoijs), an implementation of QOI in Javascript.
 
 The primary advantage of this custom image format over PNG is speed (both compression and decompression), with file sizes typically also being smaller.
 
@@ -25,7 +25,7 @@ This repo does not currently have a specification PDF. The primary changes that 
 # Benchmark
 The area 10240 in each direction around (0, 0) in `main` was compressed using PNG and this custom format. Time and output size was measured.
 I used an AMD Ryzen 7 1800X CPU to benchmark this with Node.js. Timing will vary if you use a different CPU or if this is ported to another language.
-(sharp)[https://sharp.pixelplumbing.com/] was used to compress in PNG format with a compression effort of 5. Using a different library or compression level will affect the results. However, this custom image format still had a smaller output size for every compression level.
+[sharp](https://sharp.pixelplumbing.com/) was used to compress in PNG format with a compression effort of 5. Using a different library or compression level will affect the results. However, this custom image format still had a smaller output size for every compression level.
 
 Timing is measured in mean milliseconds per chunk.
 Size is measured in mean bytes per chunk.
