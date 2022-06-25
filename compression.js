@@ -42,7 +42,7 @@ export function encodeChunk(colorData) {
       const indexPosition = ((red * 3 + green * 5 + blue * 7) % 128) * 3
 
       if (index[indexPosition] === red && index[indexPosition + 1] === green && index[indexPosition + 2] === blue) {
-        //this pixel is in the saved color palette, we can just encode a reference to it
+        //this pixel is in the recent color palette, we can just encode a reference to it
         result[p++] = indexPosition / 3
         break mainChecks
       }

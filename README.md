@@ -19,7 +19,7 @@ This repo does not currently have a specification PDF. The primary changes that 
   - QOI_OP_DIFF was removed because most of OWOP has much larger differences between pixels than 2 RGB points.
   - An operation was added which indicates that the current pixel is the same color as the above pixel.
   - Opcodes were changed in multiple operations:
-    - Allows for a 128 color index instead of 64 for the saved color palette. (This results in less colors needing to be specified with full RGB.)
+    - Allows for a 128 color index instead of 64 for the recent color palette. (This results in less colors needing to be specified with full RGB.)
     - Reduces the green difference encoding in QOI_OP_LUMA from 6 bits to 5. (This reduces the usefulness of QOI_OP_LUMA, but tests indicate that the opcode changes are still a net improvement.)
 
 This image format is unnamed right now, I'm open to suggestions.
