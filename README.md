@@ -22,10 +22,12 @@ This repo does not currently have a specification PDF. The primary changes that 
     - Allows for a 128 bit index instead of 64 for the saved color palette. (This results in less colors needing to be specified with full RGB.)
     - Reduces the green difference encoding in QOI_OP_LUMA from 6 bits to 5. (This reduces the usefulness of QOI_OP_LUMA, but tests indicate that the opcode changes are still a net improvement.)
 
+This image format is unnamed right now, I'm open to suggestions.
+
 # Benchmark
 The area 10240 in each direction around (0, 0) in `main` was compressed using PNG and this custom format. Time and output size was measured.
 I used an AMD Ryzen 7 1800X CPU to benchmark this with Node.js. Timing will vary if you use a different CPU or if this is ported to another language.
-[sharp](https://sharp.pixelplumbing.com/) was used to compress in PNG format with a compression effort of 5. Using a different library or compression level will affect the results. However, this custom image format still had a smaller output size for every compression level.
+[sharp](https://sharp.pixelplumbing.com/) was used to compress in PNG format with a compression effort of 5. Using a different library or compression level will affect the results. However, this custom image format still had a smaller output size for every compression level. Also note that these performance benchmarks don't include disk read/write time, so performance gains might not be as big in reality.
 
 Timing is measured in mean milliseconds per chunk.
 Size is measured in mean bytes per chunk.
